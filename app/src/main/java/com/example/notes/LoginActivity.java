@@ -4,8 +4,11 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.style.ForegroundColorSpan;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText emailEditText, passwordEditText;
     Button loginBtn;
     ProgressBar progressBar;
-    TextView createAccountBtnTextView;
+    TextView createAccountBtnTextView, forgetPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +38,12 @@ public class LoginActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progress_bar);
         loginBtn = findViewById(R.id.login_button_btn);
         createAccountBtnTextView = findViewById(R.id.create_account_text_view_btn);
+        forgetPass = findViewById(R.id.forget_password);
 
         loginBtn.setOnClickListener(v -> loginUser());
         createAccountBtnTextView.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, CreateAccountActivity.class)));
 
-
+        forgetPass.setOnClickListener(v-> startActivity(new Intent(LoginActivity.this, ForgetPasswordActivity.class)));
     }
     
     void loginUser(){
@@ -65,7 +69,8 @@ public class LoginActivity extends AppCompatActivity {
                     //login is success
                     if(firebaseAuth.getCurrentUser().isEmailVerified()){
                         //go to main activity
-                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        startActivity(new Intent(LoginActivity.this, Home.class));
+                        finish();
                     }
                     else{
                         Utility.showToast(LoginActivity.this, "Email not verified, Please verify email");

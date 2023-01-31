@@ -6,7 +6,17 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
     <color name="my_primary">#128EA3</color>
-    <color name="red">#FF0000</color>
+    <color name="my_primary01">#C31E58</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white01">#D8D7D2</color>
+    <color name="white02">#FFF7F7</color>
+    <color name="reddish">#3C2A2A</color>
+    <color name="light01">#9F6B6B</color>
+    <color name="light02">#C69060</color>
+    <color name="light03">#9FA15F</color>
+    <color name="light04">#669A82</color>
+    <color name="light05">#9E7DAF</color>
+    <color name="light06">#C6A472</color>
+
 </resources>

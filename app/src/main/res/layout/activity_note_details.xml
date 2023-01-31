@@ -17,8 +17,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/page_title"
             android:text="Add New Note"
-            android:textSize="32sp"
-            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/caveatmedium"
             android:textColor="@color/white"/>
         <ImageButton
             android:layout_width="36dp"
@@ -47,8 +47,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/note_title_text"
             android:hint="Title"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:textSize="18sp"
+            android:fontFamily="@font/charmbold"
             android:padding="12dp"
             android:textColor="@color/black"
             android:layout_marginVertical="8dp"/>
@@ -58,8 +58,9 @@
             android:id="@+id/note_conten_text"
             android:hint="Content"
             android:gravity="top"
-            android:minLines="15"
-            android:textSize="20sp"
+            android:minLines="10"
+            android:textSize="18sp"
+            android:fontFamily="@font/charmregular"
             android:padding="12dp"
             android:textColor="@color/black"
             android:layout_marginVertical="8dp"/>
@@ -72,9 +73,9 @@
         android:text="Delete"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:textColor="@color/red"
+        android:textColor="@color/black"
         android:visibility="gone"
-        android:textStyle="bold"
+        android:fontFamily="@font/caveatbold"
         android:textSize="25sp"
         android:layout_marginBottom="25dp"/>
 

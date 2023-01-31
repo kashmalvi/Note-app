@@ -23,6 +23,12 @@ public class Utility {
                 .document(currentUser.getUid()).collection("my_notes");
     }
 
+    static CollectionReference getCollectionReferenceForPassword(){
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        return FirebaseFirestore.getInstance().collection("Passwords")
+                .document(currentUser.getUid()).collection("my_password");
+    }
+
     @SuppressLint("SimpleDateFormat")
     static String timestampToString(Timestamp timestamp){
         return new SimpleDateFormat("dd/MM/yyyy").format(timestamp.toDate());
